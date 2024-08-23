@@ -1,0 +1,44 @@
+const n = "robokassa_iframe", s = "https://auth.robokassa.ru";
+let r = "https://auth.robokassa.ru/merchant/v1/iframe", d = {
+  overflow: "",
+  width: ""
+};
+function l() {
+  this.OpenPaymentForm = function(e) {
+    let o = document.getElementById(n);
+    o.style.visibility = "visible", e && (window.robokassa_bodyStyle = document.body.style, d.overflow = document.body.style.overflow, d.position = document.body.style.position, d.width = document.body.style.width, document.body.style.overflow = "hidden", document.body.style.width = "100%");
+  }, this.ClosePaymentForm = function() {
+    var e = document.getElementById(n);
+    e.style.visibility = "hidden", e.src = "", document.body.style.overflow = d.overflow, document.body.style.width = d.width;
+  }, this.GetDocument = function(e) {
+    let o = document.createElement("form");
+    o.action = r, o.method = "POST", o.setAttribute("target", n);
+    for (let i in e) {
+      let t = document.createElement("input");
+      t.type = "hidden", t.name = i, t.value = e[i], o.appendChild(t);
+    }
+    document.body.appendChild(o), o.submit();
+  }, this.Render = function(e, o) {
+    if (!e || e.length === 0) {
+      console.error("Parameters null or empty");
+      return;
+    }
+    let i = JSON.parse(e.Settings), t = document.createElement("iframe");
+    t.setAttribute("id", n), t.setAttribute("name", n), t.setAttribute("allowTransparency", "true"), i.Mode === "modal" ? (t.setAttribute("style", "border:0;width:100%;height:100%;overflow:hidden;background-color:transparent;position:fixed;top:0;visibility:hidden;z-index:2147483647"), document.body.appendChild(t)) : i.Mode === "widget" && (t.setAttribute("style", "border:0;width:100%;height:100%;visibility:hidden;"), document.getElementById(o).appendChild(t)), this.GetDocument(e), this.OpenPaymentForm(i.Mode === "modal");
+  }, this.StartPayment = function(e) {
+    !e || e.length === 0 || (e.Settings = JSON.stringify({ Mode: "modal" }), this.Render(e));
+  };
+}
+window.Robokassa = new l();
+window.addEventListener("message", a, !1);
+function a(e) {
+  if (e.origin !== s && e.origin !== s.replace("ru", "kz")) {
+    console.error(`Unknown origin '${e.origin}'`);
+    return;
+  }
+  switch (e.data.action) {
+    case "closeRobokassaFrame":
+      window.Robokassa.ClosePaymentForm();
+      break;
+  }
+}

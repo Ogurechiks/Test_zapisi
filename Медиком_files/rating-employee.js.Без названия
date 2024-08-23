@@ -1,0 +1,117 @@
+var BookingAppControllers = angular.module("BookingApp.controllers");
+
+BookingAppControllers.controller('RatingEmployee', ['$scope', '$http', 'settings', 'RatingEmployees', '$location', '$rootScope', 'ClientInfo',
+    function($scope, $http, settings, Employees, $location, $rootScope, ClientInfo){
+
+    $scope.visitId = 0;
+
+    $scope.settings = {
+        title:null,
+        template:null,
+        setTemplate:function(name){
+            if(!this[name]){
+                return;
+            }
+            this.title = this[name].title;
+            this.template =  this[name].template;
+        },
+        'set-compliment':{
+            template:'set-compliment',
+            title: 'Спасибо за вашу оценку!'
+        },
+        'set-rating':{
+            template:'set-rating',
+            title: 'Оцените Ваш визит'
+        }
+    };
+    $scope.HOST = window.HOST;
+
+    $scope.showLoader=false;
+    $scope.settings.setTemplate('set-rating');
+
+    $scope.showRatings = false;
+
+    $scope.closeRatings = function() {
+        $scope.showRatings = false;
+        if($scope.employees && !$scope.employees.isSendingMarks){
+            $scope.employees.emit('all-marks', $scope.employees.marks);
+        }
+    };
+
+    $scope.$on('closePushRatingModal', function (e, visitId) {
+        if (visitId === $scope.visitId) {
+            $scope.showRatings = false;
+        }
+    });
+
+    $scope.loader = function(value){
+        $scope.showRatings = value;
+    };
+
+    $scope.check = function() {
+        return $location.path() !== '/network' && $location.path() !== '/internet-disconnected' && settings.ORG_ID && ClientInfo.isAuth;
+    };
+
+    window.notification.on('receive-notification', function(){
+        if(!window.MOBILE_APP)
+            return;
+
+        $http.get(window.HOST+"/booking/rating/getRatingRequest", {params:{orgid:settings.ORG_ID, networkid:settings.NETWORK_ID}})
+            .success(function(push){
+            if (!push) return;
+            $scope.settings.setTemplate('set-rating');
+            var d = push.visitDate.split(/[^0-9]/g);
+            $scope.visitDate = new Date(d[0], d[1]-1, d[2], d[3], d[4], d[5]);
+
+            $scope.employees = new Employees(push.employees);
+
+            $scope.employees.on('hidden', function(){
+                if(Employee.countVisible <= 0){
+                    $scope.showRatings = false;
+                }
+            });
+            $scope.visitId = push.visitId;
+
+            $scope.employees.on('all-marks', function(items){
+                if(Object.keys(items).length < 1){
+                    return;
+                }
+                $scope.showLoader=true;
+                $scope.employees.isSendingMarks = true;
+
+                var arrMarksEmployees = [];
+                for(var item in items){
+                    arrMarksEmployees.push({id:item, rating: items[item]});
+                }
+                $http.post(window.HOST+'/booking/rating/saveRatings',{visitId : push.visitId,employees : arrMarksEmployees},{
+                    params: {
+                        orgid       : settings.ORG_ID,
+                        networkid   : settings.NETWORK_ID
+                    }
+                }).success(function(){
+                    $scope.settings.setTemplate('set-compliment');
+                }).error(function(){
+                    $scope.showRatings = false;
+                }).finally(function(){$scope.showLoader=false;});
+            });
+            $scope.employees.on('without-marks', function(items){
+                $scope.showRatings = false;
+            });
+
+            if($scope.employees.data.length > 0){
+                $scope.showRatings = true;
+            }
+        })
+    });
+
+    setInterval(function(){
+        if($scope.check())
+            window.notification.emit('receive-notification');
+    }, 60000);
+    window.BookingControllerOnload(function(){
+        if($scope.check())
+            window.notification.emit('receive-notification');
+    });
+}]);
+
+window.notification = new CreateEvent();

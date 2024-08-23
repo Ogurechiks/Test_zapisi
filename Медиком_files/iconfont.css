@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "iconfont";
+    src: url("./iconfont.eot?d8bf780c7afd945d6b956e8d382661a8?#iefix") format("embedded-opentype"),
+url("./iconfont.woff2?d8bf780c7afd945d6b956e8d382661a8") format("woff2"),
+url("./iconfont.woff?d8bf780c7afd945d6b956e8d382661a8") format("woff"),
+url("./iconfont.ttf?d8bf780c7afd945d6b956e8d382661a8") format("truetype"),
+url("./iconfont.svg?d8bf780c7afd945d6b956e8d382661a8#iconfont") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: iconfont !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-acc-calendar:before {
+    content: "\f101";
+}
+.icon-acc-phone:before {
+    content: "\f102";
+}
+.icon-account:before {
+    content: "\f103";
+}
+.icon-add-account:before {
+    content: "\f104";
+}
+.icon-documents:before {
+    content: "\f105";
+}
+.icon-edit:before {
+    content: "\f106";
+}
+.icon-email:before {
+    content: "\f107";
+}
+.icon-expand-arrow:before {
+    content: "\f108";
+}
+.icon-to-document:before {
+    content: "\f109";
+}
+.icon-visit-history:before {
+    content: "\f10a";
+}
+.icon-work-clock:before {
+    content: "\f10b";
+}
+.icon-work-phone:before {
+    content: "\f10c";
+}
+
+.icon-menu-tax {
+    background-image: url('data:image/svg+xml;utf8,<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_1275_927" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="2" width="22" height="26"><path d="M23.05 3.5H6.95005C6.64505 3.5 6.35254 3.62116 6.13688 3.83683C5.92121 4.05249 5.80005 4.345 5.80005 4.65V25.35C5.80005 25.655 5.92121 25.9475 6.13688 26.1632C6.35254 26.3788 6.64505 26.5 6.95005 26.5H23.05C23.355 26.5 23.6476 26.3788 23.8632 26.1632C24.0789 25.9475 24.2 25.655 24.2 25.35V4.65C24.2 4.345 24.0789 4.05249 23.8632 3.83683C23.6476 3.62116 23.355 3.5 23.05 3.5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.9749 18.45H19.0249M10.9749 21.9H14.9999M18.4499 8.675L13.8499 13.275L11.5499 10.975" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask><g mask="url(#mask0_1275_927)"><path d="M1.19995 1.2H28.7999V28.8H1.19995V1.2Z" fill="currentColor"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+
+}
