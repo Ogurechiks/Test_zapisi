@@ -1,0 +1,369 @@
+/*
+#333333
+
+Цвета: #9a2ebc, #fbedfe(select)
+
+*/
+html, button, .main-font, input, textarea{
+    color: #000000;
+}
+.organization-name, .organization-info,
+.salon-name, .salon-address{
+    color: #1D1D1B;
+}
+.without-discount .price .number, .without-discount .price .currency{
+    color: #000000;
+}
+.before-icon:before {
+    color: #333333;
+}
+.go-back-button:before {
+    color: #333333;
+}
+.employee-review:before {
+    color: #333333;
+}
+.employee-tab.active {
+    border-color: #333333;
+}
+.employee-item-any-master:after {
+    color: #333333;
+}
+.m-item:after {
+    color: #333333;
+}
+.m-item:before {
+    color: #333333;
+}
+.swiper-citys .swiper-citys-slide .swiper-citys-slide-name{
+    color: #000000;
+}
+.selected-service,
+.daily-schedule .time-element,
+.service-choice .service-tabs,
+.profile-best-services-item,
+.thanks-you-recorder-service,
+.company-tabs,
+.profile-visits-history-item,
+.substrate{
+    background-color: #f2f2f2;
+}
+/* .main{
+    background-color: #FCFCFC;
+} */
+.main{
+    background-color: #fbfbfb;
+}
+.referer-present {
+    color: #333333;
+}
+/* BEGIN /common-visit.css */
+.visit .slider .slide-container .date-element.selected{
+    background-color:#333333;
+}
+/* END /common-visit.css */
+/* BEGIN /services.css */
+.service-choice .service-tab.active {
+    border-bottom: 3px solid #333333;
+    color: #333333;
+}
+#best-services .disabled,
+.service-choice .multi-select .ui-select-choices-row.disabled{
+    background-color: rgba(51,51,51, 0.1);
+}
+/* END /services.css */
+
+/* BEGIN /ac/booking.css */
+.button-bar .next {
+    background-color: #333333;
+}
+.button-bar .back {
+    color: #333333;
+}
+/* END /ac/booking.css */
+/* BEGIN /desktop/calendar.css */
+.calendar .pickadate-cell .pickadate-active {
+    background-color: #333333;
+}
+/* END /ac/calendar.css */
+/* BEGIN /ac/employee-selector.css */
+.employee-selector .employee.selected {
+    border-color: #333333;
+}
+/* END /ac/employee-selector.css */
+/* BEGIN /ac/visit.css */
+.arnc-slider-wrapper.day-row .arnc-slider .arnc-slider-element-info.selected{
+    background-color: #333333;
+}
+.daily-schedule .time-element.selected{
+    background:#333333;
+}
+.arnc-slider-wrapper .arrow.arrow-right-enabled{
+    color: #333333;
+}
+.arnc-slider-wrapper .arrow.arrow-left-enabled{
+    color: #333333;
+}
+.visit .time-calculating-overlay {
+    color: #333333;
+}
+/* END /ac/visit.css */
+/* BEGIN /mobile/common-mobile-booking.css */
+input[type='checkbox'] + label::before{
+    color: #333333;
+}
+/* END /mobile/common-mobile-booking.css */
+
+/* BEGIN /auth*.css */
+.auth.personal-info .field label{
+    color: #333333;
+}
+.auth-code-phone-repeat,
+.auth-skip{
+    color: #333333;
+}
+.auth-button{
+    background-color: #333333;
+}
+.auth-history .icon,
+.auth-percent .icon,
+.image-logout,
+.image-next,
+.image-calendar{
+    color: #333333;
+}
+/* END /auth*.css */
+
+.swiper-citys .right-button{
+    color: #333333;
+}
+.swiper-citys .left-button{
+    color: #333333;
+}
+.image-user-out,
+.ligth-background{
+    color: #333333;
+}
+.color{
+    color: #333333 !important;
+}
+.color-before:before{
+    color: #333333;
+}
+.color-after:after{
+color: #333333;
+}
+.border-color{
+    border-color: #333333;
+}
+.background-color{
+    background-color: #333333;
+}
+
+.main-tabs .tab:before {
+    background-color: #333333;
+}
+.bonuses-tabs .tab:before {
+    background-color: #333333;
+}
+.bonuses-tabs .tab.current {
+    color: #333333;
+}
+.menu-button:before{
+    color: #333333;
+}
+.menu-button.hover,
+.menu-button:hover{
+    background-color: #333333;
+}
+.menu-button.hover:before,
+.menu-button:hover:before{
+    color: #fff !important;
+}
+.service-choice .autocomplete-contain .angucomplete-row:hover {
+    background-color: rgba(51,51,51, 0.1);
+}
+.service-choice .autocomplete-contain .angucomplete-row:hover {
+    background-color: rgba(51,51,51, 0.1);
+}
+.bonuses-card {
+    box-shadow: 0 6px 31px 0 rgba(51,51,51, 0.6);
+}
+.company-tabs .company-tab.active{
+    color: #333333;
+    border-bottom: 4px solid #333333;
+}
+.enable-push-notifications__image-line,
+.enable-push-notifications__image-circle,
+.background-gradient{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+    background: #FCFCFC; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #e5e5e5 30%, #e5e5e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #e5e5e5 30%, #e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #e5e5e5 30%, #e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.app-service.selected .app-service-box{
+background-color: #333333;
+}
+.swiper-slide.selected {
+background-color: #333333;
+}
+.app-cat-service-counter {
+background-color: #333333;
+}
+.app-service-checked {
+background-color: #333333;
+}
+.swiper-slide.selected {
+background-color: #333333;
+}
+.swiper-slide.selected::before{
+background-color: #333333 !important;
+opacity: 0.7;
+}
+.app-service:not(.service-description-hover):hover {
+background-color: #333333;
+}
+.referer-numbers {
+background-color: #333333;
+}
+.referer-promo-box {
+color: #333333;
+}
+.referer-promo {
+color: #333333;
+}
+.ref-button {
+background-color: #333333;
+}
+.promo-opener-arrow{
+border-bottom: 2px solid #333333;
+border-right: 2px solid #333333;
+}
+.ref-button-desktop {
+background-color: #333333;
+}
+.swiper-pagination-bullet-active {
+background: #333333;
+}
+.app-commodity-basket {
+border: solid 1.5px #333333;
+}
+.app-commodity-basket.choice {
+background-color: #333333;
+}
+.app-commodity-basket:hover {
+background-color: #333333;
+}
+.app-commodity-basket:before {
+color: #333333;
+}
+.app-commodity-box:hover .popup-open {
+color: #333333;
+}
+.hover-color:hover {
+color: #333333;
+}
+.d-ss-result-box .ps__thumb-y {
+background-color: #333333}
+
+.d-ss-result-box .ps__rail-y:hover > .ps__thumb-y {
+background-color: #333333;
+width: 6px;
+}
+
+.d-ss-result-box .ps__rail-y:focus > .ps__thumb-y {
+background-color: #333333;
+width: 6px;
+}
+
+.color-placeholder-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color: #333333;
+}
+.color-placeholder-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #333333;
+opacity:  1;
+}
+.color-placeholder::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #333333;
+opacity:  1;
+}
+.color-placeholder:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color:    #333333;
+}
+.color-placeholder::-ms-input-placeholder { /* Microsoft Edge */
+color: #333333;
+}
+.color-placeholder::placeholder { /* Most modern browsers support this now. */
+color: #333333;
+}
+.site-frame .organization-title-desktop-wrapper {
+    background-color: #333333;
+}
+.site-frame .items .item .item-name.active .menu-name {
+color: #333333;
+}
+.site-frame .items .item .item-name.active {
+border-bottom: 2px solid #333333;
+}
+.oz-button-container .widget.back{
+color: #333333;
+}
+.button.b3.widget.back{
+color: #333333;
+}
+.site-frame .items .item:hover .item-name.inactive,
+.site-frame .items .item:hover .inactive .main-menu-image{
+color: #333333 !important;
+}
+.widget-menu-kebab:hover #widget-menu-kebab-img{
+fill: #333333;
+}
+.icon-account:before {
+color: #333333;
+}
+.icon-edit:before {
+color: #333333;
+}
+.icon-acc-phone:before {
+color: #333333;
+}
+.icon-email:before {
+color: #333333;
+}
+.icon-documents:before {
+color: #333333;
+}
+.icon-add-account:before {
+color: #333333;
+}
+.icon-acc-calendar:before {
+color: #333333;
+}
+.edit-profile:hover {
+border: 1px solid #333333 !important;
+}
+.edit-profile-cancel {
+border: 1px solid #333333 !important;
+color: #333333;
+}
+.personal-arrow{
+border-bottom: 2px solid #333333 !important;
+border-right: 2px solid #333333 !important;
+}
+.client-name:hover {
+color: #333333 !important
+}
+.widget-frame .main-frame-glass .close-frame .icon {
+background-color: #333333;
+}
+.widget-frame .main-frame-glass .close-frame:hover {
+background-color: #333333;
+}
+.add-account {
+background-color: #333333;
+}
+.network-org-card .button-fill {
+background-color: #333333;
+}

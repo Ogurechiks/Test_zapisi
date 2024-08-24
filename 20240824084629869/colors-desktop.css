@@ -1,0 +1,42 @@
+/*
+#333333
+
+Цвета: #9a2ebc, (#a5b9e7,#c7baec, #edaae9)
+*/
+/* BEGIN /desktop/ac/desktop-booking.css */
+.main-frame {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a5b9e7+0,c7baec+50,edaae9+100 */
+    background-color: #FCFCFC; /* Old browsers */
+    background-image: -moz-linear-gradient(top,  #e5e5e5 0%, #e5e5e5 100%); /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(top,  #e5e5e5 0%, #e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to bottom,  #e5e5e5 0%, #e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    background-attachment:fixed;
+}
+.main-tabs .tab.current{
+    color:#333333;
+}
+.button{
+    background: #333333;
+    border:2px solid #333333;
+}
+.button.outline{
+    color: #333333;
+}
+/* END /desktop/ac/desktop-booking.css */
+.m-item:hover {
+    background-color: #333333;
+}
+.m-subitem:hover {
+    background: #333333;
+}
+.go-back-button:hover {
+background-color: #333333;
+}
+.d-ss-result-item:hover .d-ss-result-item-name {
+color: #333333;
+}
+.app-service-description-icon:hover {
+background-color: #333333;
+color: white !important;
+}

@@ -1,0 +1,51 @@
+/*
+#333333
+
+Цвета: #9a2ebc
+
+*/
+body{
+    background-color: #fbfbfb;
+}
+/* BEGIN /mobile/ac/mobile-booking.css */
+.button{
+    background: #333333;
+    border:2px solid #333333;
+}
+.button.outline{
+    color: #333333;
+}
+/* END /mobile/ac/mobile-booking.css */
+/* BEGIN /mobile/ac/mobile-calendar.css */
+.calendar .go-back {
+    color: #333333;
+    border: 2px solid #333333;
+}
+/* END /mobile/ac/mobile-calendar.css */
+/* BEGIN /mobile/ac/mobile-visit.css */
+.visit .month{
+    color: #333333}
+.visit .month .calendar{
+    background-image: url("");
+}
+/* END /mobile/ac/mobile-visit.css */
+.organization-title-table{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+    background: #FCFCFC; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #e5e5e5 30%, #e5e5e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #e5e5e5 30%, #e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #e5e5e5 30%, #e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.personal-info input:focus,
+.personal-info textarea:focus{
+    border-color: #333333 !important;
+}
+.main-content .personal-info .field label,
+.service-choice .form-label{
+    color: #333333;
+}
+select:focus,
+input:focus{
+    border-color: #333333 !important;
+}

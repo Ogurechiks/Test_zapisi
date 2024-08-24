@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+#testing-iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+#testing-iframe.desktop {
+    width: 100%;
+}
+#testing-iframe.mobile {
+    width: 360px;
+    height: 640px;
+    margin: 40px auto 0;
+}
+#testing-iframe.widget {
+    display: none;
+}
+.bt-top-line {
+    height: 42px;
+    border-bottom: 1px solid #cccccc;
+}
+.bt-top-line-item {
+    width: 67px;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid #cccccc;
+    float: left;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.bt-top-line-item:hover {
+    background-color: #e2e7f9;
+}
+.bt-top-line-item.active {
+    background-color: #e2e7f9;
+}
+.bt-top-line-item-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+
